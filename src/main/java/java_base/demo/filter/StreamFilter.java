@@ -1,13 +1,15 @@
 package java_base.demo.filter;
 
 import javax.swing.text.html.Option;
+import java.io.*;
 import java.util.*;
 import java.util.function.*;
 import java.util.stream.*;
 
 public class StreamFilter {
 
-    public static void main(String [] args){
+    public static void main(String [] args) throws Exception{
+
 
     }
 
@@ -39,7 +41,7 @@ public class StreamFilter {
         //skip 跳过前几条数据
         alist.stream().filter(a -> !"123".equals(a.getUsername())).skip(3).forEach(System.out::print);
 
-        Stream<Stream<Character>> stream = new Stream<Stream<Character>>() {
+         Stream<Stream<Character>> stream = new Stream<Stream<Character>>() {
             @Override
             public Stream<Stream<Character>> filter(Predicate<? super Stream<Character>> predicate) {
                 return null;
@@ -130,10 +132,10 @@ public class StreamFilter {
                 return new Object[0];
             }
 
-            @Override
-            public <A> A[] toArray(IntFunction<StreamFilter.A[]> generator) {
-                return null;
-            }
+//            @Override
+//            public <A> A[] toArray(IntFunction<StreamFilter.A[]> generator) {
+//                return null;
+//            }
 
             @Override
             public Stream<Character> reduce(Stream<Character> identity, BinaryOperator<Stream<Character>> accumulator) {
@@ -155,10 +157,10 @@ public class StreamFilter {
                 return null;
             }
 
-            @Override
-            public <R, A> R collect(Collector<? super Stream<Character>, StreamFilter.A, R> collector) {
-                return null;
-            }
+//            @Override
+//            public <R, A> R collect(Collector<? super Stream<Character>, StreamFilter.A, R> collector) {
+//                return null;
+//            }
 
             @Override
             public Optional<Stream<Character>> min(Comparator<? super Stream<Character>> comparator) {
