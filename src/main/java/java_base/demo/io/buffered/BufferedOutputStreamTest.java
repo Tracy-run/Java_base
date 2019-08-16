@@ -19,6 +19,14 @@ public class BufferedOutputStreamTest {
 
         bos.write(sb.toString().getBytes("utf-8"));
 
+
+
+        if(outs != null) {
+            outs.close();
+        }
+        if(bos != null) {
+            bos.close();
+        }
     }
 
 }
