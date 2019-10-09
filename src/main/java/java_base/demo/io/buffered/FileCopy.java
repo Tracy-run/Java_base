@@ -10,7 +10,7 @@ import java.io.FileOutputStream;
  */
 public class FileCopy {
 
-    public static void main(String[] args){
+    public static void main1(String[] args){
         /**
          * 1.先将文件中的内容读入到缓冲输入流中
          * 2.将输入流中的数据通过缓冲输出流写入到目标文件中

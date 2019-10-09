@@ -41,7 +41,7 @@ public class StreamFilter {
         //skip 跳过前几条数据
         alist.stream().filter(a -> !"123".equals(a.getUsername())).skip(3).forEach(System.out::print);
 
-         Stream<Stream<Character>> stream = new Stream<Stream<Character>>() {
+         /*Stream<Stream<Character>> stream = new Stream<Stream<Character>>() {
             @Override
             public Stream<Stream<Character>> filter(Predicate<? super Stream<Character>> predicate) {
                 return null;
@@ -242,20 +242,21 @@ public class StreamFilter {
 
             }
         };
-
+*/
         List<String> strList = Arrays.asList("aaa", "bbb", "ccc", "ddd", "eee");
 
         //这是讲一个字符串转化为一个字符集合，然后通过流的方式返回
-        Stream<Stream<Character>> stream2 = strList.stream().map(StreamApiTest::filterCharacter);
+      /*  Stream<Stream<Character>> stream2 = strList.stream().map(StreamApiTest::filterCharacter);
 
         stream2.forEach((sm) -> {
             sm.forEach(System.out::print);
-        });
+        });*/
         //flatMap
-        Stream<Character> stream3 = strList.stream()
-                .flatMap(StreamApiTest::filterCharacter);
+        /*Stream<Character> stream3 = strList.stream()
+                .flatMap(StreamApiTest
+                        ::filterCharacter);
         stream3.forEach(System.out::print);
-
+*/
         //mapToDouble，mapToInt，mapToLong返回的是相对应的流
         List<Double> doubles = Arrays.asList(1D,2D,3D,4D);
 
